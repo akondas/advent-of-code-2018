@@ -1,14 +1,42 @@
-# Day 1: Inverse Captcha
+# Day 1: Chronal Calibration
 
-[Problem description](https://adventofcode.com/2017/day/1)
+[Problem description](https://adventofcode.com/2018/day/1)
 
 ## PHP solution
 
 ```php
-function sum(string $input): int
+public function frequency(array $lines): int
 {
-    return array_sum(array_filter(str_split($input), function (string $current, int $key) use ($input): bool {
-        return $current === $input[($key + 1) % \strlen($input)];
-    }, ARRAY_FILTER_USE_BOTH));
+    return array_reduce($lines, function (int $frequency, string $next): int {
+        return $frequency + (int) $next;
+    }, 0);
+}
+```
+
+Second:
+
+```
+public function frequencyTwice(array $lines): int
+{
+    $frequency = 0;
+    $frequencies = array_map(function (string $next) use (&$frequency): int {
+        $frequency += (int) $next;
+
+        return $frequency;
+    }, $lines);
+
+    $nextIndex = 0;
+    while (true) {
+        $frequency += (int) $lines[$nextIndex];
+
+        if (in_array($frequency, $frequencies)) {
+            return $frequency;
+        }
+
+        ++$nextIndex;
+        if ($nextIndex == count($lines)) {
+            $nextIndex = 0;
+        }
+    }
 }
 ```
