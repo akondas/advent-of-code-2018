@@ -1,0 +1,29 @@
+{
+    "name": "akondas/advent-of-code-2018",
+    "type": "project",
+    "description": "Solutions to the 2018 Advent of Code challenges in PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arkadiusz Kondas",
+            "email": "arkadiusz.kondas@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "symfony/console": "^4.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.12",
+        "phpunit/phpunit": "^7.2"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "scripts": {
+        "fix-cs": "vendor/bin/php-cs-fixer fix",
+        "tests": "vendor/bin/phpunit"
+    }
+}
