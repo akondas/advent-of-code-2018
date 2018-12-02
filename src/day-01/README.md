@@ -15,7 +15,7 @@ public function frequency(array $lines): int
 
 Second:
 
-```
+```php
 public function frequencyTwice(array $lines): int
 {
     $frequency = 0;

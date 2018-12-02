@@ -7,4 +7,5 @@ use Symfony\Component\Console\Application;
 
 $application = new Application();
 $application->add(new AdventOfCode\Day1\Command());
+$application->add(new AdventOfCode\Day2\Command());
 $application->run();

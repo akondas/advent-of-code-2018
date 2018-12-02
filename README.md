@@ -9,6 +9,7 @@ bin/console day:<number> <input>
 ```
 
 * [Day 1: Chronal Calibration](src/day-01/)
+* [Day 2: Inventory Management System](src/day-02/)
 
 ## Tests
 
