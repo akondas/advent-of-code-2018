@@ -26,12 +26,12 @@ final class ChronalCalibration
         while (true) {
             $frequency += (int) $lines[$nextIndex];
 
-            if (in_array($frequency, $frequencies)) {
+            if (\in_array($frequency, $frequencies)) {
                 return $frequency;
             }
 
             ++$nextIndex;
-            if ($nextIndex == count($lines)) {
+            if ($nextIndex == \count($lines)) {
                 $nextIndex = 0;
             }
         }

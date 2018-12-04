@@ -10,10 +10,10 @@ final class InventoryManagementSystem
     {
         $counts = array_reduce($ids, function (array $counts, string $id) {
             $letters = array_count_values(str_split($id));
-            if (in_array(2, $letters)) {
+            if (\in_array(2, $letters)) {
                 ++$counts['2'];
             }
-            if (in_array(3, $letters)) {
+            if (\in_array(3, $letters)) {
                 ++$counts['3'];
             }
 

@@ -10,6 +10,7 @@ bin/console day:<number> <input>
 
 * [Day 1: Chronal Calibration](src/day-01/)
 * [Day 2: Inventory Management System](src/day-02/)
+* [Day 3: No Matter How You Slice It](src/day-03/)
 
 ## Tests
 
